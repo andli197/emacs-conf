@@ -1,3 +1,5 @@
+(setq emacs-start-time (current-time))
+
 (defun user/file-exist (file-path)
   (and file-path (file-directory-p file-path)))
 
@@ -28,7 +30,10 @@
       (setq package-user-dir (file-name-as-directory (concat emacs-hq "packages")))
 
       (require 'package)
-      (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+      (add-to-list 'package-archives
+                   '("melpa" . "https://melpa.org/packages/") t)
+      (add-to-list 'package-archives
+                   '("melpa-stable" . "https://stable.melpa.org/packages/") t)
       (package-initialize)
 
       (when (not package-archive-contents)

@@ -9,8 +9,9 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 (blink-cursor-mode 0)
 (setq-default indent-tabs-mode nil)
-(setq tool-bar-mode '())
-(setq menu-bar-mode '())
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(setq inhibit-splash-screen t)
 
 (use-package cyberpunk-theme)
 
