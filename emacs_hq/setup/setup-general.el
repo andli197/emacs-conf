@@ -13,7 +13,9 @@
 (menu-bar-mode -1)
 (setq inhibit-splash-screen t)
 
-(use-package cyberpunk-theme)
+(use-package cyberpunk-theme
+  :config
+  (load-theme 'cyberpunk t))
 
 (global-set-key (kbd "M-+") 'text-scale-increase)
 (global-set-key (kbd "M-0") 'text-scale-decrease)
